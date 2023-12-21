@@ -1,16 +1,24 @@
 {
-  "name": "the-hideaway-converted",
-  "version": "1.0.0",
+  "name": "the-hideaway-app",
+  "version": "1.0.1",
   "description": "",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "postinstall": "electron-builder install-app-deps",
-    "pack": "electron-builder --win=portable"
+    "pack": "electron-builder --win=portable",
+    "publish": "electron-builder --win=portable --publish always"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nsimpson08/TheHideawayApp.git"
+  },
+  "build": {
+    "publish": [{
+        "provider": "github",
+        "owner": "nsimpson08",
+        "repo": "TheHideawayApp"
+    }]
   },
   "dependencies": {
     "jquery": "^3.6.0",
