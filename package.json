@@ -14,11 +14,13 @@
     "url": "git+https://github.com/nsimpson08/TheHideawayApp.git"
   },
   "build": {
-    "publish": [{
+    "publish": [
+      {
         "provider": "github",
         "owner": "nsimpson08",
         "repo": "TheHideawayApp"
-    }]
+      }
+    ]
   },
   "dependencies": {
     "jquery": "^3.6.0",

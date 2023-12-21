@@ -60,7 +60,7 @@ $(function() {
                         data:records,
                         layout:"fitColumns",
                         initialSort:[
-                            {column:"firstName", dir:"asc"},
+                            {column:"endTimeStamp", dir:"dec"},
                         ],
                         index:"playerID",
                         columns:[
