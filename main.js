@@ -1,7 +1,7 @@
 // main.js
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
-const {autoUpdater} = require("electron-updater");
+const {autoUpdater} = require("electron-github-autoupdater");
 
 let mainWindow;
 
@@ -52,5 +52,10 @@ app.on('window-all-closed', function () {
 // app quits.
 //-------------------------------------------------------------------
 app.on('ready', function()  {
-    autoUpdater.checkForUpdatesAndNotify();
+    autoUpdater({
+        baseUrl: 'https://github.com/nsimpson08/TheHideawayApp.git',
+        owner: 'nsimpson08',
+        repo: 'TheHideawayApp',
+        accessToken: "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"
+    });
 });
