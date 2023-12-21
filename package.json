@@ -1,13 +1,13 @@
 {
   "name": "the-hideaway-app",
   "version": "1.0.4",
-  "description": "",
+  "description": "Time App for Poker Tables",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "postinstall": "electron-builder install-app-deps",
-    "pack": "electron-builder --win=portable",
-    "publish": "electron-builder --win=portable --publish always"
+    "pack": "electron-builder",
+    "publish": "electron-builder --publish always"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,10 @@
     "publish": [
       {
         "provider": "github",
+        "private": "true",
         "owner": "nsimpson08",
-        "repo": "TheHideawayApp"
+        "repo": "TheHideawayApp",
+        "token": "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"
       }
     ]
   },
@@ -36,7 +38,7 @@
     "name": "Nick Simpson",
     "email": "nick.simpson08@gmail.com"
   },
-  "license": "GNU",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^27.0.0",
     "electron-builder": "^24.9.1"

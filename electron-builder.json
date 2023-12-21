@@ -13,6 +13,26 @@
         "app/**/*",
         "node_modules"
     ],
+    "dmg": {
+        "background": null,
+        "backgroundColor": "#ffffff",
+        "window": {
+            "width": "400",
+            "height": "300"
+        },
+        "contents": [
+            {
+                "x": 100,
+                "y": 100
+            },
+            {
+                "x": 300,
+                "y": 100,
+                "type": "link",
+                "path": "/Applications"
+            }
+        ]
+    },
     "win": {
         "target": "nsis"
     }
