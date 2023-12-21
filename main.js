@@ -1,6 +1,7 @@
 // main.js
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
+const {autoUpdater} = require("electron-updater");
 
 let mainWindow;
 
@@ -41,5 +42,15 @@ app.whenReady().then(() => {
 });
 
 app.on('window-all-closed', function () {
-    if (process.platform !== 'darwin') app.quit();
+    app.quit();
+});
+
+//-------------------------------------------------------------------
+// Auto updates - Option 1 - Simplest version
+//
+// This will immediately download an update, then install when the
+// app quits.
+//-------------------------------------------------------------------
+app.on('ready', function()  {
+    autoUpdater.checkForUpdatesAndNotify();
 });
