@@ -1,7 +1,18 @@
 // main.js
-const { app, BrowserWindow } = require('electron');
+const {app, BrowserWindow, Menu} = require('electron');
+const {autoUpdater} = require("electron-updater");
+const log = require('electron-log');
 const path = require('path');
-const {autoUpdater} = require("electron-github-autoupdater");
+
+//-------------------------------------------------------------------
+// Logging
+//
+// This logging setup is not required for auto-updates to work,
+// but it sure makes debugging easier :)
+//-------------------------------------------------------------------
+autoUpdater.logger = log;
+autoUpdater.logger.transports.file.level = 'info';
+log.info('App starting...');
 
 let mainWindow;
 
@@ -32,6 +43,10 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
+    // Create the Menu
+    const menu = Menu.buildFromTemplate([]);
+    Menu.setApplicationMenu(menu);
+
     createWindow();
   
     app.on('activate', () => {
@@ -45,17 +60,6 @@ app.on('window-all-closed', function () {
     app.quit();
 });
 
-//-------------------------------------------------------------------
-// Auto updates - Option 1 - Simplest version
-//
-// This will immediately download an update, then install when the
-// app quits.
-//-------------------------------------------------------------------
 app.on('ready', function()  {
-    autoUpdater({
-        baseUrl: 'https://github.com/nsimpson08/TheHideawayApp.git',
-        owner: 'nsimpson08',
-        repo: 'TheHideawayApp',
-        accessToken: "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"
-    });
+    autoUpdater.checkForUpdatesAndNotify();
 });

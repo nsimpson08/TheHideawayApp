@@ -1,6 +1,6 @@
 {
   "name": "the-hideaway-app",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Time App for Poker Tables",
   "main": "main.js",
   "scripts": {
@@ -17,10 +17,8 @@
     "publish": [
       {
         "provider": "github",
-        "private": "true",
         "owner": "nsimpson08",
-        "repo": "TheHideawayApp",
-        "token": "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"
+        "repo": "TheHideawayApp"
       }
     ]
   },
@@ -31,8 +29,8 @@
     "nedb": "^1.0.0",
     "tabulator-tables": "^5.5.1",
     "@popperjs/core": "2.11.8",
-    "electron-github-autoupdater": "2.0.0",
-    "electron-is-dev": "2.0.0"
+    "electron-updater": "^6.1.7",
+    "electron-log": "^5.0.1"
   },
   "keywords": [],
   "author": {
