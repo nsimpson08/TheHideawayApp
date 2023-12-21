@@ -1,5 +1,3 @@
 **/node_modules
-out/win-unpacked/**
-out/builder-debug.yml
-out/builder-effective-config.yaml
+out/**
 dist/**
