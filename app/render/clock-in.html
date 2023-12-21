@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clock In</title>
+
+        <!-- Global Styles -->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Jquery -->
+        <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Page-specific-->
+        <link rel="stylesheet" href="../css/pkg/tabulator/tabulator.css">
+        <script src="../js/clockin.js"></script> 
+    </head>
+
+    <body>
+        <!-- keep it add-player-page for styling for now -->
+        <div id="main" class="add-player-page">
+            <div class="page-header">
+                <div id="title">The Hideaway</div>
+                <div id="pageID">Clock In</div>
+            </div>
+            
+            <div class="container-fluid">
+                <div id="failure">No player found</div>
+                <form id="searchPlayerForm" onsubmit="submitForm(); return false;">
+                    <div class="form-group">
+                        <label for="playerSearch">Player Name Search</label>
+                        <input name="submitSearch" id="submitSearch" value="Search" type="submit" class="btn btn-primary"/>
+                        <input name="playerSearch" id="playerSearch" type="text" required/>
+                    </div>
+                </form>
+
+                <div id="playerSearchReturn"></div>
+            </div>
+
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center fixed-top">
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./floor.html">Floor</a>
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./add-player.html">Add Player</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./clock-in.html">Clock In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./clock-out.html">Clock Out</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./all-players-display.html">All Players</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="./logs.html">Logs</a>
+                    </li>
+                </ul>
+            </nav> 
+        </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+{
+    "appId": "com.thehideaway.poker",
+    "productName": "The Hideaway Poker",
+    "copyright": "NICK SIMPSON LTD.",
+    "directories": {
+        "app": ".",
+        "output": "out",
+        "buildResources": "build-res"
+    },
+    "files": [
+        "package.json",
+        "main.js",
+        "app/**/*",
+        "node_modules"
+    ],
+    "win": {
+        "target": "nsis"
+    }
+}

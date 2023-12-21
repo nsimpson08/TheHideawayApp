@@ -1,0 +1,94 @@
+/* All Pages */
+body {width: 100%; height: 100%; background-color: black; color: white; overflow: auto; font-size: 24px; margin: 0;}
+#main #title {font-size: 34px; text-align: center;}
+#main #pageID {font-size: 24px; text-align: center;}
+#main #goBack {font-size: 24px; text-align: center;}
+input.error {border: 2px solid red !important;}
+input.errorINPUT {border: 2px solid red !important;}
+.form-submit-data {width: 75%; margin: 0 auto 30px; text-align: center; color: black; background-color: white; border-radius: 10px; padding: 10px; display: none;}
+
+/* Header */
+
+/* Admin Page */
+#main.admin .container-fluid {display: flex; justify-content: space-around;}
+#main.admin .createUser .error, #main.admin .changePassword .error {display: none; color: red;}
+
+/* Bootstrap Overrides */
+#main .page-header {margin: 4em 0 2em;}
+
+/* Login Page*/
+#main.login-page .login form {text-align: center;}
+#main.login-page .login #loginForm input {width: 50%; border-radius: 10; padding: 10px; margin: 10px 0;}
+#main.login-page .welcome {text-align: center;}
+
+/* Add Player Form */
+#main.add-player-page .formHolder {padding: 0 0 3em;}
+#main.add-player-page form {width: 604px; margin: 0 auto; padding: 20px 40px; background-color: #3E444A; border-radius: 13px;}
+#main.add-player-page form .form-group {width: 100%; display: inline-block; margin: 0 auto; clear: both; padding:20px 0;}
+#main.add-player-page form .form-group label {float: left; color: white;}
+#main.add-player-page form .form-group label span {color: red;}
+#main.add-player-page form .form-group input {float: right; border-radius: 7px; padding: 5px 8px;}
+#main.add-player-page form .form-group input.error {border: 4px solid red;}
+#main.add-player-page form #submit {display: block; padding: 5px 20px; margin: 20px auto; border-radius: 10px;}
+
+#main.add-player-page #searchPlayerForm {margin-bottom: 20px;}
+#main.add-player-page #success {display: none; width: 400px; height: 100px; border-radius: 30px; color: white; background-color: black; text-align: center; line-height: 100px; margin: 20px auto;}
+#main.add-player-page #failure {display: none; text-align: center; color: red; font-size: 24px;}
+#main #success {display: none; width: 400px; height: 100px; border-radius: 30px; color: white; background-color: black; text-align: center; line-height: 100px; margin: 20px auto;}
+#main #failure {display: none; text-align: center; color: red; font-size: 24px;}
+
+/* Floor Display */
+#main.floor .table {font-size: 21px;}
+#main.floor input {width: 100px; vertical-align: middle;}
+#main.floor form {width: 80%x;}
+#main.floor .nextTable {margin-top: 3em;}
+#main.floor .table th span {color: lawngreen;}
+#main.floor .text-center {font-size: 24px;}
+#main.floor #failure {display: none; width: 400px; height: 100px; border-radius: 30px; color: white; background-color: black; text-align: center; line-height: 100px; margin: 20px auto;}
+
+/* Clock In Page */
+#main.clock-in-page form {margin: 0 auto;}
+#main.clock-in-page form .formInput {width: 100%; display: inline-block; margin: 0 auto; clear: both; padding:30px 0;}
+#main.clock-in-page form .formInput label {float: left; width: 35%;}
+#main.clock-in-page form .formInput input {float: left; border-radius: 7px; padding: 5px 8px; margin-left: 20px;}
+#main.clock-in-page form .formInput input.error {border: 2px solid red;}
+#main.clock-in-page form #submit {display: block; margin: 0 auto; border-radius: 10px;}
+#main.clock-in-page form#searchPlayerForm {margin: 20px auto 0;}
+#main.clock-in-page .playerSearchError {text-align: center; color: red;}
+#main.clock-in-page #clockInForm {width: 100%;}
+
+/* Clock Out Page */
+#main.clock-out-page #activePlayersTable th span {color: lawngreen;}
+#main.clock-out-page #endOfDay {text-align: center; margin-bottom: 2em;}
+#main.clock-out-page #endOfDay input {padding: 10px; border-radius: 10px;}
+
+/* End Of Day Table */
+#main.end-day-page .table th span {color: lawngreen;}
+#main.end-day-page .nextTable {margin: 4em auto;}
+#main.end-day-page .fileError {text-align: center; color: red;}
+
+/* Display Table */
+#allPlayersTable .btn-delete {background-color: #990000; color: white;}
+#allPlayersTable .btn-save {background-color: #046d20; color: white;}
+#allPlayersTable .btn-edit {border: 1px solid black;}
+#allPlayersTable .btn-save, #allPlayersTable .btn-cancel, #allPlayersTable .btn-delete {display: none;}
+#allPlayersTable .tabulator-selected .btn-save, #allPlayersTable .tabulator-selected .btn-cancel, #allPlayersTable .tabulator-selected .btn-delete {display: block;}
+
+.tabulator-row.alert-num .tabulator-cell {color: white;}
+#allPlayersTable .tabulator-row.alert-num .tabulator-cell .btn, #allPlayersTable .tabulator-row.alert-num .tabulator-cell .btn-edit {color: white; border:1px solid white;}
+.tabulator-row.alert-num .tabulator-cell input {color: white;}
+.tabulator-cell.alert-num {font-size: 18px; color: red;}
+.tabulator-row.alert-num {background-color: #990000 !important; color: white;}
+.tabulator-row.alert-num .alert-num {font-size: 18px; color: white;}
+
+/* Export Logs Page */
+#main.logs-page .logDisplay {text-align: center;}
+#main.logs-page .logDisplay #filesContainer {margin-top: 50px;}
+#main.logs-page .logDisplay #filesContainer .dateTitle {text-decoration: underline;}
+#main.logs-page .logDisplay #filesContainer a {display: block; color: white; margin: 10px 0;}
+
+.logDisplay {text-align: center;}
+.viewLink .date-time {text-decoration: underline; font-weight: bold;}
+
+#main.player-display-page #searchPlayerForm {margin: 10px; text-align: center;}
+#main.player-display-page #searchPlayerForm {margin: 10px; text-align: center;}

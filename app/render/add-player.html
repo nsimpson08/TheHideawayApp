@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Player</title>
+
+        <!-- Global Styles -->
+        <link rel="stylesheet" href="../css/style.css">
+        
+        <!-- Jquery -->
+        <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Page-specific-->
+        <link rel="stylesheet" href="../css/pkg/tabulator/tabulator.css">
+        <script src="../js/addPlayer.js"></script> 
+    </head>
+
+    <body>
+        <div id="main" class="add-player-page">
+            <div class="page-header">
+                <div id="title">The Hideaway</div>
+                <div id="pageID">Add Player</div>
+            </div>
+            
+            <div class="container-fluid">
+                <div id="success">Successfully added <span class="success-first-name"></span> <span class="success-last-name"></span></div>
+                <div id="failure">Failure to add <span class="failure-first-name"></span> <span class="failure-last-name"></span>. Please try again</div>
+                <div class="formHolder">
+                    <form id="addPlayerForm" onsubmit="submitForm(); return false;">
+                        <div class="form-group">
+                            <label for="firstName">First Name<span>*</span></label>
+                            <input name="firstName" id="firstName" type="text" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name<span>*</span></label>
+                            <input name="lastName" id="lastName" type="text" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="sitMoneyBought">Sit Money<span>*</span></label>
+                            <input name="sitMoneyBought" id="sitMoneyBought" type="text" required pattern="^[-]?\d+$"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input name="phone" id="phone" type="text" pattern="\d*"/>
+                        </div>
+                        <input name ="submit" id="submit" value="Add Player" type="submit" class="btn btn-primary"/>
+                    </form>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center fixed-top">
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./floor.html">Floor</a>
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./add-player.html">Add Player</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./clock-in.html">Clock In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./clock-out.html">Clock Out</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./all-players-display.html">All Players</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="./logs.html">Logs</a>
+                    </li>
+                </ul>
+            </nav> 
+        </div>
+    </body>
+</html>

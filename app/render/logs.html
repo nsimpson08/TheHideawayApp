@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>View Logs</title>
+
+        <!-- Global Styles -->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Jquery -->
+        <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Page-specific-->
+        <link rel="stylesheet" href="../css/pkg/tabulator/tabulator.css">
+        <script src="../js/logs.js"></script> 
+    </head>
+
+    <body>
+        <div id="main" class="logs-display-page">
+            <div class="page-header">
+                <div id="title">The Hideaway</div>
+                <div id="pageID">View Activity Logs by date</div>
+            </div>
+            
+            <div class="container-fluid">
+                <div class="logDisplay">
+                    <p>Date: <input type="date" id="datepicker"></p>
+                    <p class="viewLink">Viewing the <span class="date-time"></span> Activity Log</p>
+                    <div id="failure">No Activity Log for that date</div>
+                    <div id="activityLogTable">
+                </div>
+            </div>
+
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center fixed-top">
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./floor.html">Floor</a>
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./add-player.html">Add Player</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./clock-in.html">Clock In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./clock-out.html">Clock Out</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./all-players-display.html">All Players</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="./logs.html">Logs</a>
+                    </li>
+                </ul>
+            </nav> 
+        </div>
+    </body>
+</html>
