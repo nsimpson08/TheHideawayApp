@@ -80,7 +80,7 @@ input.errorINPUT {border: 2px solid red !important;}
 .tabulator-cell.alert-num {font-size: 18px; color: red;}
 .tabulator-row.alert-num {background-color: #990000 !important; color: white;}
 .tabulator-row.alert-num .alert-num {font-size: 18px; color: white;}
-.tabulator-cell[tabulator-field=CancelButton], .tabulator-cell[tabulator-field=SaveButton], .tabulator-cell[tabulator-field=DeleteButton] {width: 85px !important;}
+.tabulator-cell[tabulator-field=CancelButton], .tabulator-cell[tabulator-field=SaveButton], .tabulator-cell[tabulator-field=DeleteButton] {width: 100px !important;}
 
 /* Export Logs Page */
 #main.logs-page .logDisplay {text-align: center;}

@@ -23,10 +23,10 @@ $(function() {
                     {title:"Phone", field:"phone", editor:"input", editable:isRowSelected},
                     {title:"Sit Money", field:"sitMoneyBought", formatter:formatter_SitMoney},
                     {title:"Playing", field:"playing", formatter:formatter_Playing},
-                    {field:"EditButton", formatter:formatter_EditButton, cellClick:cellClick_EditButton, headerSort:false},
-                    {field:"CancelButton", formatter:formatter_CancelButton, cellClick:cellClick_CancelButton, headerSort:false, resizable:false, visible:false},
-                    {field:"SaveButton", formatter:formatter_SaveButton, cellClick:cellClick_SaveButton, headerSort:false, resizable:false, visible:false},
-                    {field:"DeleteButton", formatter:formatter_DeleteButton, cellClick:cellClick_DeleteButton, headerSort:false, resizable:false, visible:false},
+                    {field:"EditButton", formatter:formatter_EditButton, cellClick:cellClick_EditButton, headerSort:false, width:300},
+                    {field:"CancelButton", formatter:formatter_CancelButton, cellClick:cellClick_CancelButton, headerSort:false, resizable:false, visible:false, width:100},
+                    {field:"SaveButton", formatter:formatter_SaveButton, cellClick:cellClick_SaveButton, headerSort:false, resizable:false, visible:false, width:100},
+                    {field:"DeleteButton", formatter:formatter_DeleteButton, cellClick:cellClick_DeleteButton, headerSort:false, resizable:false, visible:false, width:100},
                 ],
             });
         }
