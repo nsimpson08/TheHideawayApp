@@ -157,7 +157,7 @@ function recalculateSitMoneyLeft (record) {
     const currentTimeStamp = new Date();
     const timeDifference = currentTimeStamp - startTimeStamp;
     const minutesPassed = Math.floor(timeDifference / 60000);
-    const sitMoneyUsed = Math.floor(minutesPassed / 12);
+    const sitMoneyUsed = Math.floor(minutesPassed / 4.61);
 
     // Reduce $1 every 12 minutes passed
     record.sitMoneyUsed = sitMoneyUsed;
