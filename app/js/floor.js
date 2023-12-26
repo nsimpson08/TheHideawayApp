@@ -178,7 +178,7 @@ function addSitMoneySubmitForActivityLog (event) {
             if (activePlayerRecord) {
                 // Tell them they need to add submit money in the above table
                 
-            } else {
+            } else if (activityLogFileExists) {
                 // Update the active player table
                 ActivityLog.find({ playerID: sitMoneyPlayerID }, (err, activityLogRecords) => {
                     if (err) {
@@ -297,18 +297,20 @@ function showFailure() {
 }
 
 function reRenderFloorDisplayActivityLog (activityLogRecord) {
-    ActivityLog.find({}, (err, records) => {
-        if (err) {
-            console.error("Error Grabbing Players: " + err);
-        } else {
-            if (records && records.length) {
-                activityLogTable.setData(records);
-                setTimeout(function() {
-                    hideDuplicateForms();
-                }, 1000);
+    if (activityLogFileExists) {
+        ActivityLog.find({}, (err, records) => {
+            if (err) {
+                console.error("Error Grabbing Players: " + err);
+            } else {
+                if (records && records.length) {
+                    activityLogTable.setData(records);
+                    setTimeout(function() {
+                        hideDuplicateForms();
+                    }, 1000);
+                }
             }
-        }
-    });
+        });
+    }
 }
 
 function hideDuplicateForms() {

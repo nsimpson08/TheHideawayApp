@@ -1,10 +1,8 @@
 const $ = require('jquery');
+const fs = require('fs');
 const Tabulator = require('tabulator-tables');
 var Datastore = require('nedb');
 var activityLogTable;
-
-const fs = require('fs');
-const path = require('path');
 
 $(function() {
     $('#datepicker').val(getTodayOrYesterday());
@@ -21,7 +19,7 @@ $(function() {
             // Update the front-end telling them what day log they are viewing
             updateViewingText(datelog);
 
-            var ActivityLog = new Datastore({ filename: filePath, autoload: true});
+            var ActivityLog = new Datastore({ filename: filePath, autoload: true });
             
             ActivityLog.find({}, (err, records) => {
                 if (err) {
