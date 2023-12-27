@@ -170,7 +170,7 @@ function addSitMoneySubmitForActivityLog (event) {
     const sitMoney = parseInt(form.elements['sitMoneyInput'].value);
     const sitMoneyPlayerID = form.elements['playerID'].value;
 
-    // If they are actively playing don't allow ass money through here because it'll ruin their sitMoneyLeft on the players table
+    // If they are actively playing don't allow money through here because it'll ruin their sitMoneyLeft on the players table
     activePlayersDB.findOne({ playerID: sitMoneyPlayerID }, (err, activePlayerRecord) => {
         if (err) {
             console.error("Error Finding Player Record to Update - 202: " + err);
@@ -185,7 +185,10 @@ function addSitMoneySubmitForActivityLog (event) {
                         console.error("Error Finding Player Record to Update - 202: " + err);
                     } else {
                         if (activityLogRecords && activityLogRecords.length) {
-                            var activityLogRecord = activityLogRecords[activityLogRecords.length-1];
+                            // Sort the array by endTimeStamp in ascending order
+                            const sortedData = activityLogRecords.sort((a, b) => a.endTimeStamp - b.endTimeStamp);
+                            
+                            var activityLogRecord = sortedData[sortedData.length-1];
                             // Update the field you want to modify
                             activityLogRecord.sitMoneyAdded = activityLogRecord.sitMoneyAdded + sitMoney;
                             activityLogRecord.sitMoneyLeft = activityLogRecord.sitMoneyLeft + sitMoney;

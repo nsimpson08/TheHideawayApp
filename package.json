@@ -1,6 +1,6 @@
 {
   "name": "the-hideaway-app",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Time App for Poker Tables",
   "main": "main.js",
   "scripts": {
