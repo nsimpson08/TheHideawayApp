@@ -180,8 +180,8 @@ function addSitMoneySubmitForActivityLog (event) {
                 
             } else if (activityLogFileExists) {
                 // Update the active player table
-                ActivityLog.find({ playerID: sitMoneyPlayerID }, (err, activityLogRecords) => {
-                    if (err) {
+                ActivityLog.find({ playerID: sitMoneyPlayerID }, (errz, activityLogRecords) => {
+                    if (errz) {
                         console.error("Error Finding Player Record to Update - 202: " + err);
                     } else {
                         if (activityLogRecords && activityLogRecords.length) {
@@ -193,17 +193,17 @@ function addSitMoneySubmitForActivityLog (event) {
                             activityLogRecord.sitMoneyAdded = activityLogRecord.sitMoneyAdded + sitMoney;
                             activityLogRecord.sitMoneyLeft = activityLogRecord.sitMoneyLeft + sitMoney;
                     
-                            ActivityLog.update({ _id: activityLogRecord._id }, activityLogRecord, (err, docs) => {
-                                if (err) console.log('ActivityLog Error: ', err);
+                            ActivityLog.update({ _id: activityLogRecord._id }, activityLogRecord, (errzz, docs) => {
+                                if (errzz) console.log('ActivityLog Error: ', err);
                             });
                             ActivityLog.persistence.compactDatafile();
 
                             reRenderFloorDisplayActivityLog(activityLogRecord);
 
                             // Add Sit Money yo the Players Table since they're not clocked in anymore
-                            playersDB.findOne({ playerID: sitMoneyPlayerID }, (err, playerRecord) => {
-                                if (err) {
-                                    console.error("Error Finding Player Record to Update - 203: " + err);
+                            playersDB.findOne({ playerID: sitMoneyPlayerID }, (errzzz, playerRecord) => {
+                                if (errzzz) {
+                                    console.error("Error Finding Player Record to Update - 203: " + errzzz);
                                 } else {
                                     if (playerRecord) {
                                         playerRecord.sitMoneyBought = playerRecord.sitMoneyBought + sitMoney;
@@ -211,7 +211,7 @@ function addSitMoneySubmitForActivityLog (event) {
                                         // Update the record in the database
                                         playersDB.update({ playerID: sitMoneyPlayerID }, playerRecord, {}, (updateErr, numReplaced) => {
                                             if (updateErr) {
-                                                console.error("Error Actually Updating the Record: " + err);
+                                                console.error("Error Actually Updating the Record: " + updateErr);
                                             }
                                         });
                                         playersDB.persistence.compactDatafile();

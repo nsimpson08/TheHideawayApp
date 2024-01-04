@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Floor 1.0.16</title>
+        <title>Emergency Flush</title>
 
         <!-- Global Styles -->
         <link rel="stylesheet" href="../css/style.css">
@@ -16,24 +16,24 @@
         <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
         <!-- Page-specific-->
-        <link rel="stylesheet" href="../css/pkg/tabulator/tabulator.css">
-        <script src="../js/floor.js"></script> 
+        <script src="../js/eFlush.js"></script> 
     </head>
 
     <body>
-        <div id="main" class="floor">
+        <div id="main" class="eflush-page">
             <div class="page-header">
                 <div id="title">The Hideaway</div>
-                <div id="pageID">Floor</div>
+                <div id="pageID">Emergency Flush</div>
             </div>
             
             <div class="container-fluid">
-                <span class="text-center d-block">Active Players</span>
-                <div id="activePlayersTable"></div>
-                <br/>
-                <span class="text-center d-block mt-5">Played Today (Activity Log)</span>
-                <div id="failure">Since they are already clocked in, you must add Sit Money in table above</div>
-                <div id="loggedPlayersTable"></div>
+                <div class="e-flush-container">
+                    <p>When the <b>Clock In</b> page shows that someone is "Already Clocked In", but they are NOT on the <b>Floor</b> page under Active Players...</p>
+                    <p>Then click this button to flush their record so that they can be clocked in again</p>
+                    <p><button type="button" class="btn btn-primary" onclick="flush()">FLUSH</button></p>
+                    <div id="success">Successfully flushed <span class="success-num-records"></span> players</div>
+                    <div id="failure">All players are accurately clocked in. No players were flushed</div>
+                </div>
             </div>
 
             <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center fixed-top">
